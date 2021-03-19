@@ -25,11 +25,14 @@ public class ProductCategoryServiceTest {
 
     @Test
     public void findOne() {
-
+        ProductCategory productCategory = productCategoryService.findOne(4);
+        Assert.assertEquals(new Integer(4), productCategory.getCategoryId());
     }
 
     @Test
     public void findAll() {
+        List<ProductCategory> productCategoryList = productCategoryService.findAll();
+        Assert.assertNotEquals(0,productCategoryList.size());
     }
 
     @Test
@@ -41,5 +44,10 @@ public class ProductCategoryServiceTest {
 
     @Test
     public void save() {
+        ProductCategory productCategory = new ProductCategory();
+        productCategory.setCategoryName("生鲜食品");
+        productCategory.setCategoryType(4);
+        ProductCategory result = productCategoryService.save(productCategory);
+        Assert.assertNotNull(result);
     }
 }

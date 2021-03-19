@@ -24,5 +24,4 @@ public class ProductCategory {
 
     private Date updateTime;
 
-
 }
