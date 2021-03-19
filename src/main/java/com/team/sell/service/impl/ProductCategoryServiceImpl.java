@@ -20,6 +20,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     @Override
     public ProductCategory findOne(Integer categoryid) {
         Optional<ProductCategory> optional = repository.findById(categoryid);
+        System.out.println("findOne");
         return optional.orElse(null);
     }
 
