@@ -1,6 +1,7 @@
-package com.team.sell.service;
+package com.team.sell.service.impl;
 
 import com.team.sell.pojo.ProductCategory;
+import com.team.sell.service.ProductCategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -18,10 +19,10 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Slf4j
-public class ProductCategoryServiceTest {
+public class ProductCategoryServiceImplTest {
 
     @Autowired
-    private ProductCategoryService productCategoryService;
+    private ProductCategoryServiceImpl productCategoryService;
 
     @Test
     public void findOne() {
