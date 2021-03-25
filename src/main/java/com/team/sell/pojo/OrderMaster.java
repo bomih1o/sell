@@ -1,14 +1,21 @@
 package com.team.sell.pojo;
 
+import com.team.sell.enums.OrderStatusEnum;
+import com.team.sell.enums.PayStatusEnum;
 import lombok.Data;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @Entity
+@DynamicUpdate
 public class OrderMaster {
 
+    @Id
     private String orderId;
 
     private String buyerName;
@@ -21,8 +28,12 @@ public class OrderMaster {
 
     private BigDecimal orderAmount;
 
-    private Integer orderStatus = 0;
+    private Integer orderStatus = OrderStatusEnum.NEW.getCode();
 
-    private Integer payStatus;
+    private Integer payStatus = PayStatusEnum.WAIT.getCode();
+
+    private Date createTime;
+
+    private Date updateTime;
 
 }
