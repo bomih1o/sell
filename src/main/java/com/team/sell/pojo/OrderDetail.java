@@ -26,10 +26,10 @@ public class OrderDetail {
     private BigDecimal productPrice;
 
     /** 商品数量. */
-    private BigDecimal productQuantity;
+    private Integer productQuantity;
 
     /** 商品小图*/
-    private BigDecimal productIcon;
+    private String productIcon;
 
 
 
