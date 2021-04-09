@@ -3,11 +3,13 @@ package com.team.sell.dto;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.team.sell.pojo.OrderDetail;
 import com.team.sell.utils.serializer.Date2LongSerializer;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+@Data
 public class OrderDTO {
 
     /** 订单id. */
