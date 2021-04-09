@@ -81,6 +81,8 @@ public class OrderServiceImpl implements OrderService {
         ).collect(Collectors.toList());
         productInfoService.decreaseStock(cartDTOList);
 
+
+
         return orderDTO;
     }
 
