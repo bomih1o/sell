@@ -1,5 +1,6 @@
 package com.team.sell.service.impl;
 
+import com.team.sell.dto.CartDTO;
 import com.team.sell.enums.ProductStatusEnum;
 import com.team.sell.pojo.ProductInfo;
 import com.team.sell.repository.ProductInfoRepository;
@@ -14,6 +15,15 @@ import java.util.Optional;
 
 @Service
 public class ProductInfoServiceImpl implements ProductInfoService {
+    @Override
+    public void increaseStock(List<CartDTO> cartDTOList) {
+
+    }
+
+    @Override
+    public void decreaseStock(List<CartDTO> cartDTOList) {
+
+    }
 
     @Autowired
     private ProductInfoRepository repository;

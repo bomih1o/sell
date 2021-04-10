@@ -52,6 +52,12 @@
             <artifactId>gson</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.jeecgframework</groupId>
+            <artifactId>jeasypoi-web</artifactId>
+            <version>2.1.7</version>
+        </dependency>
+
     </dependencies>
 
     <build>
