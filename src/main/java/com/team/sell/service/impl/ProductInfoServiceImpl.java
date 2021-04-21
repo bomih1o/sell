@@ -2,6 +2,7 @@ package com.team.sell.service.impl;
 
 import com.team.sell.dto.CartDTO;
 import com.team.sell.enums.ProductStatusEnum;
+import com.team.sell.enums.ResultEnum;
 import com.team.sell.exception.SellException;
 import com.team.sell.pojo.ProductInfo;
 import com.team.sell.repository.ProductInfoRepository;
@@ -51,8 +52,21 @@ public class ProductInfoServiceImpl implements ProductInfoService {
         for (CartDTO cartDTO : cartDTOList) {
             ProductInfo productInfo = findOne(cartDTO.getProductId());
             if (productInfo == null){
-                //throw new SellException("");
+                throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
             }
+
+            Integer result = productInfo.getProductStock() - cartDTO.getProductQuantity();
+            if(result < 0){
+                throw new SellException(ResultEnum.PRODUCT_STOCK_ERROR);
+            }
+
+            productInfo.setProductStock(result);
+
+            repository.save(productInfo);
         }
     }
+
+
+
+
 }
