@@ -1,7 +1,6 @@
 package com.team.sell.service.impl;
 
 import com.team.sell.pojo.ProductCategory;
-import com.team.sell.service.ProductCategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,8 +11,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 
 @RunWith(SpringRunner.class)
@@ -46,8 +43,8 @@ public class ProductCategoryServiceImplTest {
     @Test
     public void save() {
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setCategoryName("生鲜食品");
-        productCategory.setCategoryType(4);
+        productCategory.setCategoryName("女生最爱");
+        productCategory.setCategoryType(1);
         ProductCategory result = productCategoryService.save(productCategory);
         Assert.assertNotNull(result);
     }

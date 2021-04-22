@@ -51,4 +51,9 @@ public class OrderServiceImplTest {
         Assert.assertNotNull(result);
 
     }
+
+    @Test
+    public void findOne() {
+        OrderDTO orderDTO = orderService.findOne("");
+    }
 }
