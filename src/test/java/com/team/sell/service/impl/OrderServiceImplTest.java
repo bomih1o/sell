@@ -37,10 +37,10 @@ public class OrderServiceImplTest {
         // 购物车
         List<OrderDetail> orderDetailList = new ArrayList<>();
         OrderDetail o1 = new OrderDetail();
-        o1.setProductId("12345678");
+        o1.setProductId("123456");
         o1.setProductQuantity(1);
         OrderDetail o2 = new OrderDetail();
-        o2.setProductId("12343455");
+        o2.setProductId("123457");
         o2.setProductQuantity(2);
         orderDetailList.add(o1);
         orderDetailList.add(o2);
