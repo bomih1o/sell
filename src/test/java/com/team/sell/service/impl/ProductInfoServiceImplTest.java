@@ -14,8 +14,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProductInfoServiceImplTest {
@@ -45,14 +43,14 @@ public class ProductInfoServiceImplTest {
     @Test
     public void save() {
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("123457");
-        productInfo.setProductName("烤鸭");
-        productInfo.setProductPrice(new BigDecimal(3.2));
+        productInfo.setProductId("100003");
+        productInfo.setProductName("COCO奶茶");
+        productInfo.setProductPrice(new BigDecimal(5.0));
         productInfo.setProductStock(100);
-        productInfo.setProductDescription("很好吃的虾");
+        productInfo.setProductDescription("超级冰爽");
         productInfo.setProductIcon("http://xxxxx.jpg");
-        productInfo.setProductStatus(ProductStatusEnum.DOWN.getCode());
-        productInfo.setCategoryType(2);
+        productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
+        productInfo.setCategoryType(3);
 
         ProductInfo result = productInfoService.save(productInfo);
         Assert.assertNotNull(result);
