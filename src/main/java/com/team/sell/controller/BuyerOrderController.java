@@ -44,7 +44,7 @@ public class BuyerOrderController {
         OrderDTO createResult = orderService.create(orderDTO);
 
         Map<String,String> map = new HashMap<>();
-        map.put("orderId",createResult.getOrderId());
+        map.put("orderId", createResult.getOrderId())
 
         return ResultVoUtil.success(map);
     }
