@@ -4,7 +4,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://192.168.1.125/sell?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://192.168.0.110/sell?characterEncoding=utf-8&useSSL=false
   jpa:
     hibernate:
       ddl-auto: update
@@ -13,3 +13,7 @@ spring:
 server:
   servlet:
     context-path: /sell
+
+wechat:
+  mpAppId: wxbbe333bf50b5b8c9
+  mpAppSecret: 497193b11eaeb2377fb77e0a172e03fe
